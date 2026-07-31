@@ -1,12 +1,13 @@
 #include "student.h"
-#include <string.h>
 
-// ========================================
-// Issue #60: Implement is_student_array_sorted
-// ========================================
-// TODO: Check if students array is sorted by ID
-//
 int is_student_array_sorted(void) {
-    // TODO: Implement this function
-    return 0;
+    int i;
+
+    for (i = 0; i < total_students - 1; i++) {
+        if (students[i].id > students[i + 1].id) {
+            return 0;
+        }
+    }
+
+    return 1;
 }
